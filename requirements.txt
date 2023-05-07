@@ -1,7 +1,4 @@
 pandas
 pandas_ta
 backtesting
-numpy
-datetime
 ccxt
-math
