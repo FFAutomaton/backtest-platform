@@ -10,6 +10,11 @@ from backtesting.lib import crossover
 import math
 
 
+def ATR(df, length=20):
+    result = ta.atr(high=df["High"], low=df["Low"], close=df["Close"], length=length)
+    return result
+
+
 #RSI
 def RSI(df, length=7):
     result = ta.rsi(df["Close"], length)
