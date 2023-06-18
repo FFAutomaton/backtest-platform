@@ -10,7 +10,7 @@ from backtesting.lib import crossover
 import math
 from utils import *
 from services.data_service import CcxtDataService
-from traders_platform.turtle import Turtle
+from traders_ffautomaton.turtle import Turtle
 import statistics
 
 
@@ -19,7 +19,7 @@ turtle = Turtle()
 
 
 class TurtleStrategy(Strategy):
-    atr_length = 80
+    atr_length = 20
 
     def init(self):
         self.atr_indicator = self.I(ATR, self.data.df, length=self.atr_length)

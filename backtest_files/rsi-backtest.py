@@ -10,7 +10,7 @@ from backtesting.lib import crossover
 import math
 from utils import *
 from services.data_service import CcxtDataService
-from traders_platform.rsi_sma import RsiEmaStrategy
+from traders_ffautomaton.rsi_sma import RsiEmaStrategy
 #warnings.filterwarnings('ignore')
 
 data = CcxtDataService.get_data('2023-01-01 00:00:00','BTC/USDT','1h')
