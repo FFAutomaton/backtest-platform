@@ -48,6 +48,5 @@ def wma4(df, length=40):
     return result
 
 def superTrendLabel(df, length=10, multiplier=3):
-    return ta.supertrend(df["High"], df["Low"], df["Close"], length, multiplier)[
-        f"SUPERT_{length}_{multiplier}.0"
-    ]
+    result = ta.supertrend(df["High"], df["Low"], df["Close"], length, multiplier)
+    return result

@@ -32,6 +32,8 @@ class TurtleStrategy(Strategy):
         else:
             self.suanki_pozisyon = 0
 
+
+
     def next(self):
         turtle.son20_highest = max(self.data.Close[-20:])
         turtle.son20_lowest = min(self.data.Close[-20:])

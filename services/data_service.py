@@ -5,7 +5,7 @@ import pandas as pd
 class CcxtDataService:
     @staticmethod
     def get_data(start_date, pair, candle_window):
-        exchange = ccxt.binanceus()
+        exchange = ccxt.binance()
 
         from_ts = exchange.parse8601(start_date)
 
