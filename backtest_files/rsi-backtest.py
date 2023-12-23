@@ -8,7 +8,7 @@ import numpy as np
 import warnings
 from backtesting.lib import crossover
 import math
-from utils import *
+from ff_utils import *
 from services.data_service import CcxtDataService
 from traders_ffautomaton.rsi_sma import RsiEmaStrategy
 #warnings.filterwarnings('ignore')
