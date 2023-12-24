@@ -14,14 +14,23 @@ from traders_ffautomaton.archelon_test import ArchelonTest
 import statistics
 from backtesting.lib import crossover
 
-binance_service = BinanceService()
+# binance_service = BinanceService()
+#
+# # data = CcxtDataService.get_data('2023-12-20 00:00:00', 'SOL/USDT', '1h')
+# data = binance_service.get_data('2023-11-01 00:00:00', 'SOLUSDT', '1h')
+# data.to_csv("data.csv")
 
-# data = CcxtDataService.get_data('2023-12-20 00:00:00', 'SOL/USDT', '1h')
-data = binance_service.get_data('2023-12-10 00:00:00', 'SOLUSDT', '1h')
-print(data)
-bt = Backtest(data, ArchelonTest, cash=10_000_000, commission=.002, trade_on_close=True)
 
-result = bt.run()
+# print(data)
+# bt = Backtest(data, ArchelonTest, cash=10_000_000, commission=.002, trade_on_close=True)
+#
+# result = bt.run()
 # bt.plot()
 # print(result._trades)
 # print(result._equity_curve)
+
+
+
+data = pd.read_csv("data.csv")
+data["last_20_high"] = data["High"].rolling(20).max()
+print(data)
