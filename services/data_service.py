@@ -20,7 +20,7 @@ class CcxtDataService:
         while True:
             from_ts = ohlcv[-1][0]
             new_ohlcv = exchange.fetch_ohlcv(pair, candle_window, since=from_ts, limit=1000)
-            ohlcv.extend(new_ohlcv)
+            ohlcv.extend(new_ohlcv[1:]) #removed replicated dates.
             if len(new_ohlcv) != 1000:
                 break
 
